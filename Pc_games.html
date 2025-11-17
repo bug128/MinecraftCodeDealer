@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>MyMinecraft - Pc Games</title>
+
+<style>
+        body {
+            margin: 0;
+            background-color: #2f3136; /* Ciemne tło forum */
+            color: #dcdfe4; /* Jasny kolor tekstu */
+            font-family: Arial, sans-serif;
+        }
+		.MyMc {
+		    margin: 50px 50px;
+			background-color: #202225;
+			width: 320px;
+			height: 340px;
+			border-radius: 10px;
+			text-align: center;
+			align-items: center;
+		}
+		.MyMc h1 {
+			font-size: 28px;
+		}
+		.MyMcImg {
+			margin: 10px 10px;
+			width: 300px;
+			height: 150px;
+		}
+        .dropdown {
+            position: relative;
+            display: inline-block; 
+            height: 30px; /* Aby cała wysokość paska była aktywna */
+        }
+		.dropdown-content {
+            position: absolute; 
+            top: 50px; /* Umieszcza menu tuż pod paskiem */
+            left: 0;
+            
+            background-color: #3b3e44; /* Tło menu rozwijanego */
+            min-width: 180px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
+            z-index: 1001;
+            
+            display: none; /* Domyślnie ukrywa menu */
+            border-radius: 0 0 4px 4px;
+        }
+		.dropdown-content p {
+            color: #dcdfe4; /* Kolor linków w menu rozwijanym */
+            padding: 0px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            text-transform: none; /* Małe litery w menu rozwijanym */
+            height: auto; /* Domyślna wysokość */
+        }
+		.dropdown:hover .dropdown-content {
+            display: block;
+        }
+		.downloadMyMc  {
+			margin-left: -85px;
+			position: absolute;
+			margin-top: 50px;
+		}
+		.lou {
+			margin-left: -0px;
+		}
+</style>
+
+</head>
+<body>
+
+<div class="MyMc">
+
+<img class="MyMcImg" src="MyMinecraftPrtScr.png">
+<h1>MyMinecraft - V 0.0.4</h1>
+<div class="dropdown">
+<p class="lou">list of updates</p></br>
+<div class="dropdown-content">
+<p>flat world</p>
+<p>rendering 4 chunk</p>
+<p>camera</p>
+<p>movement</p>
+<p>3 blocks</p>
+<p>breaking blocks</p>
+<p>placing blocks</p>
+<p>hotbar</p>
+</div>
+</div>
+
+<a class="downloadMyMc" href="MyMinecraft.zip" download="MyMinecraft.zip">Download</a>
+
+</div>
+
+</body>
+</html>
