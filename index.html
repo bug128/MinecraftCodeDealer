@@ -1,14 +1,206 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>MyMinecraft - download</title>
-  </head>
-  <body>
-    <div>
-      <la>Game</la>
-      <la>Release calendar</la>
-      <la>Opinions</la>
-      <la>Contact</la>
-    </div>wydania
-  </body>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyMinecraft - Dashboard</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        /*
+        ===================================
+        USTAWIENIA OGÓLNE I TŁO
+        ===================================
+        */
+        body {
+            margin: 0;
+            background-color: #2f3136; /* Ciemne tło forum */
+            color: #dcdfe4; /* Jasny kolor tekstu */
+            font-family: Arial, sans-serif;
+        }
+
+        .icon-bar {
+            display: flex;
+            gap: 35px; /* Odstęp między elementami menu */
+            max-width: 1200px; 
+            width: 100%;
+            padding: 0 20px;
+        }
+
+        /* Domyślny styl dla wszystkich linków w pasku */
+        .icon-bar a, .dropdown-button {
+            color: #dcdfe4; /* Biały/jasny tekst */
+            text-decoration: none;
+            font-size: 16px;
+			margin-top: 17px;
+            /* Ustawienie paddingu góra/dół, aby zapewnić przestrzeń */
+            padding: 0 15px; /* Dodatkowe paddingi boczne */
+            
+            /* Używamy Flexbox do centrowania tekstu pionowo w ramach wysokości 50px */
+            display: flex;
+            align-items: center; /* KLUCZ: Centruje tekst pionowo */
+            
+            transition: color 0.3s;
+            text-transform: uppercase;
+        }
+        
+        .icon-bar a:hover, .dropdown-button:hover {
+            color: #3498db; /* Kolor podświetlenia po najechaniu */
+        }
+
+        /* Upewnij się, że .top-navbar ma to poprawnie zdefiniowane */
+        .top-navbar {
+            position: fixed; 
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 50px;
+            z-index: 1000;
+            background-color: #202225; /* Bardzo ciemny kolor paska */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+			
+            display: flex;
+            align-items: center; /* KLUCZ: Centruje zawartość paska (czyli .icon-bar) */
+            justify-content: center; 
+        }
+        /*
+        ===================================
+        ROZWIJANE MENU (DROPDOWN)
+        ===================================
+        */
+        .dropdown {
+            position: relative;
+            display: inline-block; 
+            height: 50px; /* Aby cała wysokość paska była aktywna */
+        }
+
+        /* Menu, które ma się pojawić */
+        .dropdown-content {
+            position: absolute; 
+            top: 50px; /* Umieszcza menu tuż pod paskiem */
+            left: 0;
+            
+            background-color: #3b3e44; /* Tło menu rozwijanego */
+            min-width: 180px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
+            z-index: 1001;
+            
+            display: none; /* Domyślnie ukrywa menu */
+            border-radius: 0 0 4px 4px;
+        }
+
+        .dropdown-content a {
+            color: #dcdfe4; /* Kolor linków w menu rozwijanym */
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            text-transform: none; /* Małe litery w menu rozwijanym */
+            height: auto; /* Domyślna wysokość */
+        }
+
+        .dropdown-content a:hover {
+            background-color: #202225; /* Ciemne podświetlenie w menu */
+            color: #ffffff;
+        }
+
+        /* Pokazuje menu po najechaniu na kontener (.dropdown) */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        
+        /*
+        ===================================
+        TREŚĆ PONIŻEJ
+        ===================================
+        */
+        .content {
+			/* Zwiększ wartość, aby treść była niżej. 
+			Wartość 70px to wysokość paska (50px) + dodatkowy margines (20px). */
+			padding-top: 70px; /* ZMIANA */
+			line-height: 1.6;
+		}
+		
+        .main-container {
+            max-width: 900px; 
+            margin: 0 auto; 
+            padding: 20px; 
+        }
+
+        .activity-bar {
+            background-color: #3b3e44;
+            padding: 10px 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        
+        /* Styl dla treści, aby wymusić przewijanie */
+        .placeholder {
+            height: 1200px;
+            text-align: center;
+            padding-top: 50px;
+            border: 1px dashed #3b3e44;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <header class="top-navbar">
+        <div class="icon-bar">
+            
+            <div class="dropdown">
+                <a href="#" class="dropdown-button">Games</a>
+                <div class="dropdown-content">
+                    <a href="#">PC Games</a>
+                    <a href="#">Console Games</a>
+                    <a href="#">Mobile Games</a>
+                    <a href="#">Upcoming</a>
+                </div>
+            </div>
+            <div class="dropdown">
+				<a href="#">Release calendar</a>
+				<div class="dropdown-content">
+					<a href="#">PC Games</a>
+					<a href="#">Console Games</a>
+					<a href="#">Mobile Games</a>
+					<a href="#">Upcoming</a>
+				</div>
+			</div>
+			<div class="dropdown">
+				<a href="#">Opinions</a>
+				<div class="dropdown-content">
+					<a href="#">PC Games</a>
+					<a href="#">Console Games</a>
+					<a href="#">Mobile Games</a>
+					<a href="#">Upcoming</a>
+				</div>
+			</div>
+			<div class="dropdown">
+				<a href="#">Contact</a>
+				<div class="dropdown-content">
+					<a href="#">Cooperation</a>
+					<a href="#">Shares</a>
+					<a href="#">Ideas</a>
+					<a href="#">Coming soon</a>
+				</div>
+			</div>
+        </div>
+    </header>
+
+    <div class="content">
+        <div class="main-container">
+            
+            <h1>I recommend seeing it</h1>
+            <a href="Pc_games.html">• PC Games</a><br/>
+			<a href="Mobile_games.html">• Mobile Games</a><br/>
+			<a href="Console_games.html">• Console Games</a><br/>
+        </div>
+    </div>
+
+</body>
 </html>
