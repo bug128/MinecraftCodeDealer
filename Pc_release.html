@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Pc games - release calendar</title>
+    <style>
+        /* CSS PRZENIESIONY DO TEJ SEKCJI ZGODNIE Z ORYGINALNYM KODEM */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #2f3136; /* Ciemne tło */
+            color: #dcdfe4; /* Jasny tekst dla lepszego kontrastu */
+        }
+
+        h1 {
+            color: #dcdfe4; /* Nagłówek w jasnym kolorze */
+            text-align: center;
+        }
+
+        /* Usunąłem nieużywany przycisk #addEntryBtn z CSS, ale zostawiłem jego style (na wszelki wypadek) */
+        #addEntryBtn {
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 20px;
+            transition: background-color 0.3s;
+        }
+
+        #addEntryBtn:hover {
+            background-color: #0056b3;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Cień dostosowany do ciemnego tła */
+            background-color: #3b3e44; /* Tło tabeli ciemniejsze niż body */
+            color: #dcdfe4; /* Tekst w tabeli jasny */
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border: 1px solid #4f535a; /* Ciemniejsza ramka */
+        }
+
+        thead th {
+            background-color: #007bff;
+            color: white;
+        }
+
+        /* Style dla kolumny Status */
+        .status-w_trakcie { background-color: #ffc107; color: #333; font-weight: bold; }
+        .status-do_korekty { background-color: #fd7e14; color: white; font-weight: bold; }
+        .status-gotowe { background-color: #28a745; color: white; font-weight: bold; }
+        .status-opublikowane { background-color: #6c757d; color: white; font-weight: bold; }
+
+        .status-btn {
+            padding: 5px 10px;
+            background-color: #17a2b8;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        /* POPRAWIONE STYLE DLA DROPDOWN */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            /* Zapewniamy, że tło komórki <td> nie zostanie "przeciągnięte" przez dropdown */
+        }
+        
+        .dropdown-content {
+            position: absolute;
+            top: 100%; /* Umieszcza menu tuż pod zawartością komórki */
+            left: -1px; /* Korekcja dla ramki tabeli */
+            
+            background-color: #3b3e44; /* Tło menu rozwijanego */
+            min-width: 180px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
+            z-index: 1001;
+            
+            display: none; /* Domyślnie ukrywa menu */
+            border-radius: 0 0 4px 4px;
+            border: 1px solid #4f535a;
+            border-top: none;
+        }
+        
+        .dropdown-content p {
+            color: #dcdfe4; /* Kolor linków w menu rozwijanym */
+            padding: 5px 10px;
+            margin: 0; /* Usuwa domyślny margines <p> */
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            text-transform: none;
+        }
+        
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>🎮 PC Games - Release Calendar</h1>
+
+    <table id="releaseCalendar">
+        <thead>
+            <tr>
+                <th>A. Data Publikacji</th>
+                <th>B. Kanał/Platforma</th>
+                <th>C. Temat/Tytuł</th>
+                <th>D. Autor/Twórca</th>
+                <th>F. Status</th>
+                <th>G. Typ Treści</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>2025-11-18 20:00</td>
+                <td><a href="Pc_games.html" style="color: #007bff;">Here</a></td>
+                <td>MyMinecraft v0.0.5</td>
+                
+                <td>
+                    <div class="dropdown">
+                        <span>MinecraftCodeDealer</span> 
+                        
+                        <div class="dropdown-content">
+                            <p>lead programmer</p>
+                        </div>
+                    </div>
+                </td>
+                
+                <td class="status-w_trakcie">W trakcie</td>
+                <td>Game</td>
+            </tr>
+            </tbody>
+    </table>
+    </body>
+</html>
